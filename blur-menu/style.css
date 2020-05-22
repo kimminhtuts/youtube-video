@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+div {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  background-color: transparent;
+}
+
+li {
+  display: inline-block;
+  font-size: 22px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+ul:hover li {
+  filter: blur(10px);
+}
+
+ul li:hover {
+  filter: blur(0);
+  font-size: 32px;
+  animation: blur 1s ease-in-out forwards;
+}
+
+@keyframes blur {
+  0% {
+    background-color: transparent;
+    color: black;
+  }
+  100% {
+    background-color: darkcyan;
+    color: whitesmoke;
+  }
+}
