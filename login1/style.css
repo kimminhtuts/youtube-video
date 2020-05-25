@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("bkg.jpg");
+  background-size: cover;
+}
+
+.box {
+  width: 600px;
+  padding: 50px;
+  background-color: rgba(230, 230, 230, 0.5);
+  border-radius: 10px;
+  box-shadow: 10px 10px 30px 5px whitesmoke;
+}
+
+form {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.title {
+  text-align: center;
+  font-size: 32px;
+  text-transform: uppercase;
+  color: darkcyan;
+}
+
+.field {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  color: darkcyan;
+}
+
+input {
+  background-color: transparent;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid grey;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  width: 80px;
+}
+
+.main-btn {
+  background-color: darkcyan;
+  color: whitesmoke;
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.sub-btn {
+  background-color: whitesmoke;
+  border: 2px solid darkcyan;
+  padding: 10px;
+  border-radius: 5px;
+  color: darkcyan;
+}
+
+a {
+  color: darkcyan;
+}
