@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+}
+
+.card {
+  cursor: pointer;
+  margin: 0 10px;
+  width: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: whitesmoke;
+  box-shadow: 2px 2px 20px 2px whitesmoke;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.text {
+  position: relative;
+  padding: 20px;
+  padding-top: 50px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  left: calc(50% - 40px);
+  position: absolute;
+  top: -40px;
+  transition: transform 1s ease-in-out;
+}
+
+.card:hover .avatar {
+  transform: rotateY(360deg);
+}
+
+.name {
+  font-size: 23px;
+  color: gray;
+  font-weight: 600;
+  text-align: center;
+}
+
+.desc {
+  font-size: small;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.contact {
+  display: flex;
+}
+
+.contact > div {
+  width: 50%;
+  text-align: center;
+  padding: 10px;
+}
+
+.stats {
+  display: flex;
+}
+
+.stats > div {
+  width: 50%;
+  padding: 15px;
+  text-align: center;
+  background-color: rgb(230, 230, 230);
+}
+
+button {
+  padding: 15px;
+  width: 100%;
+  background-color: goldenrod;
+  border: none;
+  outline: none;
+  color: whitesmoke;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
