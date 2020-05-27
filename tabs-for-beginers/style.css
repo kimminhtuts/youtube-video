@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: darkslategray;
+}
+
+.tabs {
+  width: 60%;
+  max-width: 600px;
+  height: 500px;
+  background-color: lightcyan;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 1px 1px 15px 2px white;
+}
+
+label {
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: darkslategray;
+  border-bottom: 5px solid darkslategray;
+  padding: 10px;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  font-weight: 600;
+}
+
+input {
+  display: none;
+}
+
+.content {
+  position: relative;
+  margin-top: 20px;
+}
+
+p {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: justify;
+  position: absolute;
+  transform: translateX(150%);
+  transition: 1s ease-in-out;
+  opacity: 0;
+}
+
+input:nth-child(1):checked ~ div p:nth-child(1) {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+input:nth-child(2):checked ~ div p:nth-child(2) {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+input:nth-child(3):checked ~ div p:nth-child(3) {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+input:not(:checked):nth-child(1) ~ div label:nth-child(1) {
+  border-bottom-color: transparent;
+}
+
+input:not(:checked):nth-child(2) ~ div label:nth-child(2) {
+  border-bottom-color: transparent;
+}
+
+input:not(:checked):nth-child(3) ~ div label:nth-child(3) {
+  border-bottom-color: transparent;
+}
