@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: darkblue;
+}
+
+p {
+  font-size: 50px;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 800;
+  border-right: 40px solid yellow;
+  animation: typing 6s steps(26, end), blink 0.5s infinite;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0%, 50% {
+    border-color: yellow;
+  }
+  75%, 100% {
+    border-color: transparent;
+  }
+}
