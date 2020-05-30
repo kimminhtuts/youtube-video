@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("img.jpg");
+  background-size: cover;
+}
+
+div {
+  font-size: 100px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 8px;
+  color: yellow;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+div:hover {
+  text-shadow: 1px 2px 1px black,
+  2px 4px 1px black,
+  3px 6px 1px black,
+  4px 8px 1px gray,
+  5px 10px 1px gray,
+  6px 12px 1px gray,
+  7px 14px 1px darkblue,
+  8px 16px 1px darkblue,
+  9px 18px 1px darkblue,
+  10px 20px 1px darkmagenta,
+  11px 22px 1px darkmagenta,
+  12px 24px 1px darkmagenta,
+  13px 26px 1px darkcyan,
+  14px 28px 1px darkcyan,
+  15px 30px 1px darkcyan;
+}
