@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background-color: transparent;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-origin: 0px 250px;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+
+.layer::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: transparent;
+  transform-origin: 0px 250px;
+  top: 0;
+  left: 0;
+}
+
+.layer:nth-child(1) {
+  background-color: yellow;
+  transform: translateX(250px) rotate(0deg);
+}
+
+.layer:nth-child(1)::before {
+  transform: rotate(100deg);
+}
+
+.layer:nth-child(2) {
+  background-color: hotpink;
+  transform: translateX(250px) rotate(100deg);
+}
+
+.layer:nth-child(2)::before {
+  transform: rotate(160deg);
+}
+
+.layer:nth-child(3) {
+  background-color: darkcyan;
+  transform: translateX(250px) rotate(160deg);
+}
+
+.layer:nth-child(3)::before {
+  transform: rotate(180deg);
+}
+
+.layer:nth-child(4) {
+  background-color: darkcyan;
+  transform: translateX(250px) rotate(180deg);
+}
+
+.layer:nth-child(4)::before {
+  transform: rotate(20deg);
+}
