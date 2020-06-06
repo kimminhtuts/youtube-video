@@ -1,0 +1,134 @@
+* { 
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("img.jpg");
+  background-size: cover;
+}
+
+input {
+  display: none;
+}
+
+.face {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transition: 1s ease;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.face > div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.eyes {
+  margin-top: 30px;
+  width: 60%;
+  transition: 0.5s ease;
+  display: flex;
+  justify-content: space-between;
+}
+
+.eyes span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.mouth {
+  display: inline-block;
+  width: 60px;
+  height: 40px;
+  border-radius: 50%;
+  border-bottom: 2px solid;
+  transition: 0.5s ease;
+}
+
+.toggle {
+  width: 300px;
+  height: 110px;
+  border-radius: 55px;
+  border: 5px solid;
+  display: flex;
+  align-items: center;
+  transition: 1s ease;
+}
+
+.container > div:nth-child(1) .toggle {
+  background-color: lightskyblue;
+}
+
+.container > div:nth-child(2) .toggle {
+  background-color: yellow;
+}
+
+.container > div:nth-child(3) .toggle {
+  background-color: salmon;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0 5px;
+  
+}
+
+input:checked ~ div .face {
+  transform: translateX(190px);
+}
+
+.container > div:nth-child(1) input:checked ~ div .face {
+  background-color: lightskyblue;
+}
+
+.container > div:nth-child(2) input:checked ~ div .face {
+  background-color: yellow;
+}
+
+.container > div:nth-child(3) input:checked ~ div .face {
+  background-color: salmon;
+}
+
+input:checked ~ div .eyes {
+  margin-top: 35px;
+  transform: translateX(5px);
+}
+
+input:checked ~ div .mouth {
+  transform: translateY(20px) rotateX(180deg);
+}
+
+.container > div input:checked ~ .toggle {
+  background-color: white;
+}
+
+.container > div:nth-child(1) input:checked ~ .toggle {
+  border-color: lightskyblue;
+}
+
+.container > div:nth-child(2) input:checked ~ .toggle {
+  border-color: yellow;
+}
+
+.container > div:nth-child(3) input:checked ~ .toggle {
+  border-color: salmon;
+}
+
+.container > div {
+  margin: 10px 0;
+}
