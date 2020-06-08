@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background-image: url("img.jpg");
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  margin-top: 200px;
+}
+
+.card {
+  width: 250px;
+  height: 400px;
+  margin: 0 10px;
+  padding: 9px;
+  background-color: white;
+  border: 1px solid gainsboro;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: 2px 2px 15px white;
+}
+
+img {
+  width: 230px;
+  height: 230px;
+  object-fit: cover;
+}
+
+.card::before, .card::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  transition: 0.5s ease;
+}
+
+.card::before {
+  top: 0;
+  left: 0;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+}
+
+.card::after {
+  bottom: 0;
+  right: 0;
+  border-bottom: 2px solid transparent;
+  border-right: 2px solid transparent;
+}
+
+.card:hover::before, .card:hover::after {
+  width: 105%;
+  height: 105%;
+  border-color: red;
+}
+
+.text {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-top: 10px;
+}
+
+span {
+  font-size: 25px;
+  color: red;
+}
