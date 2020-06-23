@@ -1,0 +1,84 @@
+:root {
+  --regular-purple: #6D5DAC;
+  --regular-red: #F9644D;
+  --regular-yellow: #FFB83D;
+  --shadow-purple: #DCD5F6;
+  --dark-purple: #57447E;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("img.jpg");
+  background-size: cover;
+}
+
+div.text {
+  text-transform: uppercase;
+  color: yellow;
+  text-shadow: 2px 2px 15px var(--regular-yellow);
+  font-size: 60px;
+  font-weight: 800;
+  margin-bottom: 50px;
+}
+
+div.carousel-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+div.carousel {
+  position: relative;
+  z-index: 10;
+}
+
+div.carousel-shadow {
+  position: absolute;
+  background-color: var(--dark-purple);
+  z-index: 9;
+  top: 30px;
+  border-radius: 16px;
+  width: 800px;
+  height: 450px;
+}
+
+div.carousel-inner {
+  width: 720px;
+  height: 405px;
+  border-radius: 16px;
+  border: 6px solid #FFFFFF;
+}
+
+img {
+  object-fit: cover;
+}
+
+.carousel-indicators {
+  margin-bottom: 0;
+  bottom: -40px;
+}
+
+.carousel-indicators li {
+  background-color: var(--shadow-purple);
+  border-radius: 50%;
+  border: none;
+  width: 16px;
+  height: 16px;
+}
+
+.carousel-indicators li:nth-child(3) {
+  background-color: var(--regular-yellow);
+  width: 100px;
+  height: 16px;
+  border-radius: 8px;
+}
