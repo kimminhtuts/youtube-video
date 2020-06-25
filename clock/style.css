@@ -85,7 +85,7 @@ html, body {
   width: 8px;
   height: 230px;
   background-color: salmon;
-  border: 4px;
+  border-radius: 4px;
 }
 
 .hand div.secondHand {
