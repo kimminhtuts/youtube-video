@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("img.jpg");
+  background-size: cover;
+}
+
+.container {
+  width: 640px;
+  height: 640px;
+  position: relative;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-origin: center center;
+  transform-style: preserve-3d;
+  animation: rotate 20s linear infinite; 
+}
+
+.carousel:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.carousel:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.carousel:nth-child(4) {
+  animation: rotate 20s linear infinite, antiAlias 20s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg) translateZ(320px);
+  }
+  10% {
+    transform: rotateY(90deg) translateZ(320px);
+  }
+  25% {
+    transform: rotateY(90deg) translateZ(320px);
+  }
+  35% {
+    transform: rotateY(180deg) translateZ(320px);
+  }
+  50% {
+    transform: rotateY(180deg) translateZ(320px);
+  }
+  60% {
+    transform: rotateY(270deg) translateZ(320px);
+  }
+  75% {
+    transform: rotateY(270deg) translateZ(320px);
+  }
+  90% {
+    transform: rotateY(360deg) translateZ(320px);
+  }
+  100% {
+    transform: rotateY(360deg) translateZ(320px);
+  }
+}
+
+@keyframes antiAlias {
+  0% {
+    visibility: hidden;
+  }
+  10% {
+    visibility: hidden;
+  }
+  24% {
+    visibility: visible;
+  }
+  25% {
+    visibility: hidden;
+  }
+  35% {
+    visibility: hidden;
+  }
+  49% {
+    visibility: visible;
+  }
+  50% {
+    visibility: hidden;
+  }
+  60% {
+    visibility: hidden;
+  }
+  74% {
+    visibility: visible;
+  }
+  75% {
+    visibility: hidden;
+  }
+  90% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+.item {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 8px;
+  transform-style: preserve-3d;
+}
+
+.carousel > div:nth-child(1) .item {
+  background-image: url("img1.jpg");
+  background-size: cover;
+  transform: rotateY(0deg);
+}
+
+.carousel > div:nth-child(2) .item {
+  background-image: url("img2.jpg");
+  background-size: cover;
+  transform: translateX(-320px) translateZ(-320px) rotateY(90deg);
+}
+
+.carousel > div:nth-child(3) .item {
+  background-image: url("img3.jpg");
+  background-size: cover;
+  transform: translateX(320px) translateZ(-320px) rotateY(90deg);
+}
+
+.carousel > div:nth-child(4) .item {
+  background-image: url("img4.jpg");
+  background-size: cover;
+  transform: translateZ(-640px) rotateY(180deg);
+}
+
+.carousel:nth-child(1) > div:nth-child(1) .item {
+  clip-path:  polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+.carousel:nth-child(2) > div:nth-child(1) .item {
+  clip-path: polygon(0 33%, 100% 33%, 100% 66%, 0 66%);
+}
+
+.carousel:nth-child(3) > div:nth-child(1) .item {
+  clip-path:  polygon(0 66%, 100% 66%, 100% 100%, 0 100%);
+}
+
+.carousel:nth-child(1) > div:nth-child(2) .item {
+  clip-path:  polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+.carousel:nth-child(2) > div:nth-child(2) .item {
+  clip-path: polygon(0 33%, 100% 33%, 100% 66%, 0 66%);
+}
+
+.carousel:nth-child(3) > div:nth-child(2) .item {
+  clip-path:  polygon(0 66%, 100% 66%, 100% 100%, 0 100%);
+}
+
+.carousel:nth-child(1) > div:nth-child(3) .item {
+  clip-path:  polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+.carousel:nth-child(2) > div:nth-child(3) .item {
+  clip-path: polygon(0 33%, 100% 33%, 100% 66%, 0 66%);
+}
+
+.carousel:nth-child(3) > div:nth-child(3) .item {
+  clip-path:  polygon(0 66%, 100% 66%, 100% 100%, 0 100%);
+}
+
+.carousel:nth-child(1) > div:nth-child(4) .item {
+  clip-path:  polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+.carousel:nth-child(2) > div:nth-child(4) .item {
+  clip-path: polygon(0 33%, 100% 33%, 100% 66%, 0 66%);
+}
+
+.carousel:nth-child(3) > div:nth-child(4) .item {
+  clip-path:  polygon(0 66%, 100% 66%, 100% 100%, 0 100%);
+}
