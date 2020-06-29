@@ -82,17 +82,17 @@ svg {
 }
 
 .donut:nth-child(2) {
-  transform: rotateZ(calc(-90deg + calc(var(--a1) * 360deg / 100)));
+  transform: rotateZ(calc(-90deg  + calc(var(--a1) * 360deg / 100)));
   animation: percent2 1s ease-in-out forwards;
 }
 
 .donut:nth-child(3) {
-  transform: rotateZ(calc(-90deg + calc(var(--a1) * 360deg / 100) + calc(var(--a2) * 360deg / 100)));
+  transform: rotateZ(calc(-90deg  + calc(var(--a1) * 360deg / 100) + calc(var(--a2) * 360deg / 100)));
   animation: percent3 1s ease-in-out forwards;
 }
 
 .donut:nth-child(4) {
-  transform: rotateZ(calc(-90deg + calc(var(--a1) * 360deg / 100) + calc(var(--a2) * 360deg / 100) + calc(var(--a3) * 360deg / 100)));
+  transform: rotateZ(calc(-90deg  + calc(var(--a1) * 360deg / 100) + calc(var(--a2) * 360deg / 100) + calc(var(--a3) * 360deg / 100)));
   animation: percent4 1s ease-in-out forwards;
 }
 
