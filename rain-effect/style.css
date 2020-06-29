@@ -16,7 +16,7 @@ body {
   border: 2px solid black;
   border: none;
   background-color: grey;
-  animation: lightning linear 2s 6;
+  animation: lightning linear 2s infinite;
 }
  
 @keyframes lightning {
@@ -78,7 +78,7 @@ body {
   height: 20px;
   position: absolute;
   left: 315px;
-  animation: drop 1s ease 6;
+  animation: drop 1s ease infinite;
   border-radius: 50%;
   transform: scale(0.7,1) rotate(45deg);
   box-shadow: 1px 1px 7px #1a1a1a;
@@ -96,7 +96,7 @@ body {
   height: 20px;
   position: absolute;
   left: 315px;
-  animation: drop 1.5s 0.03s ease 6;
+  animation: drop 1.5s 0.03s ease infinite;
   border-radius: 50%;
   transform: scale(0.7,1) rotate(45deg);
   box-shadow: 1px 1px 7px #1a1a1a;

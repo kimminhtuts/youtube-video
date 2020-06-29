@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div id="text" class="text"></div>
+    <svg xmlns="http://www.w3.org/2000/svg">
+      <circle id="circle" cx="400" cy="400"  r="300" stroke-width="38" stroke="#FFFF00" fill="none"/>
+      <circle id="donut" cx="400" cy="400" class="circle_animation" r="300" stroke-width="38" stroke="#03e3fc" fill="none"/>
+    </svg>
+    <div class="rating">
+      <input type="radio" id="star5" name="rating" value="5" /><label onclick="setRate(1)" class = "full" for="star5" title="Awesome - 5 stars"></label>
+      <input type="radio" id="star4half" name="rating" value="4 and a half" /><label onclick="setRate(0.9)" class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+      <input type="radio" id="star4" name="rating" value="4" /><label onclick="setRate(0.8)" class = "full" for="star4" title="Pretty good - 4 stars"></label>
+      <input type="radio" id="star3half" name="rating" value="3 and a half" /><label onclick="setRate(0.7)" class="half" for="star3half" title="Meh - 3.5 stars"></label>
+      <input type="radio" id="star3" name="rating" value="3" /><label onclick="setRate(0.6)" class = "full" for="star3" title="Meh - 3 stars"></label>
+      <input type="radio" id="star2half" name="rating" value="2 and a half" /><label onclick="setRate(0.5)" class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+      <input type="radio" id="star2" name="rating" value="2" /><label onclick="setRate(0.4)" class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+      <input type="radio" id="star1half" name="rating" value="1 and a half" /><label onclick="setRate(0.3)" class="half" for="star1half" title="Meh - 1.5 stars"></label>
+      <input type="radio" id="star1" name="rating" value="1" /><label onclick="setRate(0.2)" class = "full" for="star1" title="Sucks big time - 1 star"></label>
+      <input type="radio" id="starhalf" name="rating" value="half" /><label onclick="setRate(0.1)" class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
