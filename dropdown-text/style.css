@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("img.jpg");
+  background-size: cover;
+}
+
+.container {
+  width: 720px;
+  height: 400px;
+  position: relative;
+}
+
+.group {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.segment {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+}
+
+.group .segment::before {
+  position: absolute;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 150px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: white;
+}
+
+.group:nth-child(1) .segment::before {
+  content: "Text";
+  animation: hide 1s 2s linear forwards;
+}
+
+.group:nth-child(2) .segment::before {
+  content: "Effect";
+}
+
+.group:nth-child(1) .segment {
+  animation: down 1s linear forwards;
+}
+
+.group:nth-child(2) .segment {
+  animation: down 1s 2s linear forwards;
+}
+
+.group:nth-child(1) .segment:nth-child(1) {
+  border-bottom: 10px solid green;
+  clip-path: polygon(0 0, 240px 0, 240px 400px, 0 400px);
+}
+
+.group:nth-child(1) .segment:nth-child(2) {
+  border-bottom: 10px solid white;
+  clip-path: polygon(240px 0, 480px 0, 480px 400px, 240px 400px);
+  animation-delay: 0.1s;
+}
+
+.group:nth-child(1) .segment:nth-child(3) {
+  border-bottom: 10px solid red;
+  clip-path: polygon(480px 0, 720px 0, 720px 400px, 480px 400px);
+  animation-delay: 0.2s;
+}
+
+.group:nth-child(2) .segment:nth-child(1) {
+  border-bottom: 10px solid green;
+  clip-path: polygon(0 0, 240px 0, 240px 400px, 0 400px);
+}
+
+.group:nth-child(2) .segment:nth-child(2) {
+  border-bottom: 10px solid white;
+  clip-path: polygon(240px 0, 480px 0, 480px 400px, 240px 400px);
+  animation-delay: 2.1s;
+}
+
+.group:nth-child(2) .segment:nth-child(3) {
+  border-bottom: 10px solid red;
+  clip-path: polygon(480px 0, 720px 0, 720px 400px, 480px 400px);
+  animation-delay: 2.2s;
+}
+
+@keyframes down {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+@keyframes hide {
+  from {
+    opacity: 1;
+  }
+  90%, 100% {
+    opacity: 0;
+  }
+}
